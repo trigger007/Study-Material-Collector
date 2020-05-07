@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Umeed</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="4/css.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script type = "text/javascript" 
+         src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+      </script>
+    
+      <script type = "text/javascript" 
+         src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js">
+      </script>
+<script>
+$(document).ready(function(){
+  $("#hover1").hover(function(){
+    $("#hover1").animate({
+      opacity:0.5
+    });
+  },
+  function(){
+    $("#hover1").animate({
+      opacity:1
+    });
+  }); 
+});
+
+$(document).ready(function(){
+  $("#hover2").hover(function(){
+    $("#hover2").animate({
+      opacity:0.5
+    });
+  },
+  function(){
+    $("#hover2").animate({
+      opacity:1
+    });
+  }); 
+});
+
+$(document).ready(function(){
+  $("#hover3").hover(function(){
+    $("#hover3").animate({
+      opacity:0.5
+    });
+  },
+  function(){
+    $("#hover3").animate({
+      opacity:1
+    });
+  }); 
+});
+
+$(document).ready(function(){
+  $("#hover4").hover(function(){
+    $("#hover4").animate({
+      opacity:0.5
+    });
+  },
+  function(){
+    $("#hover4").animate({
+      opacity:1
+    });
+  }); 
+});
+
+$(document).ready(function(){
+  $("#hover5").hover(function(){
+    $("#hover5").animate({
+      opacity:0.5
+    });
+  },
+  function(){
+    $("#hover5").animate({
+      opacity:1
+    });
+  }); 
+});
+
+/* link animation */
+$(document).ready(function(){
+  $("#link").mouseenter(function(){
+    $("#link").effect( "bounce", {color:"#669966"}, 500 );
+  }); 
+});
+
+$(document).ready(function(){
+  $("#link1").mouseenter(function(){
+    $("#link1").effect( "pulsate", {color:"#669966"},1500 );
+  }); 
+});
+
+$(document).ready(function(){ 
+    $(window).scroll(function(){ 
+        if ($(this).scrollTop() > 100) { 
+            $('#scroll').fadeIn(); 
+        } else { 
+            $('#scroll').fadeOut(); 
+        } 
+    }); 
+    $('#backtotop').click(function(){ 
+        $("html, body").animate({ scrollTop: 0 }, 1300); 
+        return false; 
+    }); 
+});
+
+/* back to top*/
+$(document).ready(function(){
+  $("#backtotop").mouseenter(function(){
+    $("#backtotop").effect( "bounce", {color:"#669966"}, 1000 );
+  }); 
+});
+
+</script>
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+
+#team {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 3;
+}
+.car {
+    overflow: hidden;
+    position: relative;
+    margin: 0 0.5% 1% 0;
+    display: inline-block
+}
+.car:nth-of-type(3n) {
+    margin-right: 0;
+}
+.car img {
+    width: 100%;
+    min-height: 100%;
+    transition: all 0.9s
+}
+.car:hover img {
+    transform: scale(1.2, 1.2)
+}
+.adata {
+    position: absolute;
+    bottom: 5%;
+    background: #fff;
+    text-align: center;
+    width: 90%;
+    height: 80px;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 10px 5%;
+    box-sizing: border-box;
+    opacity: 0.8;
+    transition: all 0.4s
+}
+.car:hover .adata {
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    opacity: 0.9;
+    padding: 90px 10%
+}
+.adata h2 {
+    margin: 0 0 5px 0;
+    transition: color 0.4s
+}
+.adata p {
+    opacity: 0;
+    text-align: justify;
+    transition: all 0.2s
+}
+.car:hover .adata p,
+.car:hover .adata a {
+    opacity: 1
+}
+.adata a {
+    color: #333;
+    text-decoration: none;
+    padding: 20px;
+    opacity: 0
+}
+.adata a:hover,
+.car:hover h2 {
+    color: #38c
+}
+
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="top">
+  <div class="bar black card">
+    <a class="bar-item button padding-large hide-medium hide-large right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="bar-item button padding-large">HOME</a>
+    <a href="#moto" class="bar-item button padding-large hide-small">FOUNDERS</a>
+    <a href="http://localhost:8081/contact" class="bar-item button padding-large hide-small">CONTACT</a>
+    <div class="dropdown-hover hide-small">
+      <button class="padding-large button" title="More">MORE <i class="fa fa-caret-down"></i></button>
+      <div class="dropdown-content bar-block card-4">
+        <a href="#operation" class="bar-item button">OPERATING SYSTEM</a>
+        <a href="#operation" class="bar-item button">SOFTWARE ENGINEERING</a>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="bar-block black hide hide-large hide-medium top" style="margin-top:46px">
+  <a href="#moto" class="bar-item button padding-large" onclick="myFunction()">OUR MOTO</a>
+  <a href="#operation" class="bar-item button padding-large" onclick="myFunction()">OPERATIONS</a>
+  <a href="http://localhost:8081/contact" class="bar-item button padding-large" onclick="myFunction()">CONTACT</a>
+</div>
+
+<!-- Page content -->
+<div class="content" style="max-width:2000px;">
+
+  <!-- Automatic Slideshow Images -->
+ 
+  <div class="mySlides display-container center" style=" height:100vh;">
+    <img src="Images/image-top1.jpg" style="width:100%;height:100%;">
+    <div class="display-middle container text-white padding-32 hide-small typewriter">
+      <h1 class="typewriter-text" style="font-size:60px;text-shadow: 2px 2px #000000 ">PLACE TO LEARN , CHANCE TO GROW..</h1>
+   
+    </div>
+  </div>
+  <div class="mySlides display-container center" style=" height:100vh;">
+    <img src="Images/image-top2.jpg" style="width:100%;height:100%;">
+    <div class="display-middle container text-white padding-32 hide-small typewriter">
+      <h1 class="typewriter-text" style="font-size:60px;text-shadow: 2px 2px #000000 ">HOLD FAST TO DREAMS..</h1>
+   
+    </div>
+  </div>
+  <div class="mySlides display-container center" style=" height:100vh;">
+    <img src="Images/image-top3.jpg" style="width:100%;height:100%;">
+    <div class="display-middle container text-white padding-32 hide-small typewriter">
+      <h1 class="typewriter-text" style="font-size:60px;text-shadow: 2px 2px #000000 ">SPREADING HOPE..</h1>
+  
+    </div>
+  </div>
+
+  <!-- The Band Section -->
+  <div class="container content center padding-32" style="max-width:800px" id="moto">
+    <h2 class="wide" style="font-size:60px" id="link">SMART LEARNING</h2>
+    <p class="opacity"><i>Spreading Hope</i></p>
+  <center>
+    <p class="justify">
+
+     <b> There is a problem for student to find whether to study the topics for university and school exam so we are providing a platform where you will find best playlist and best study material gathered all around from web </b>
+    </p>
+  </center>
+    <div class="row padding-32">
+      <div class="third" align="center">
+        <div class="car" style="width:80%; height:90% ;">
+          <img src="Images/founder2.jpg" alt="" />
+          <div class="adata">
+            <h5>Aditya Singh</h5>
+            <i>Founder</i><br>
+            <a href="https://www.facebook.com/profile.php?id=100023037169160" class="fa fa-facebook"></a>
+            <a href="https://www.linkedin.com/in/kishan-pandey-5a038217b" class="fa fa-linkedin-square"></a>
+
+          </div>
+        </div>
+      </div>
+        <div class="third" align="center">
+          <div class="car" style="width:80%; height:90% ;">
+            <img src="Images/founder3.jpg" alt="" />
+            <div class="adata">
+              <h5>Kishan Pandey</h5>
+              <i>Founder</i><br>
+              <a href="https://www.facebook.com/profile.php?id=100023037169160" class="fa fa-facebook"></a>
+              <a href="https://www.linkedin.com/in/kishan-pandey-5a038217b" class="fa fa-linkedin-square"></a>
+
+            </div>
+          </div>
+        </div>
+        <div class="third" align="center">
+            <div class="car" style="width:80%; height:90% ;">
+              <img src="Images/founder1.jpg" alt="" />
+              <div class="adata">
+                <h5>Shreyansh Satvik</h5>
+                <i>Founder</i><br>
+                <a href="https://www.facebook.com/profile.php?id=100023037169160" class="fa fa-facebook"></a>
+                <a href="https://www.linkedin.com/in/kishan-pandey-5a038217b" class="fa fa-linkedin-square"></a>
+  
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>
+
+  <!-- The Tour Section -->
+  <div class="black" id="operation">
+    <div class="container content padding-64" style="max-width:800px">
+      <h2 class="wide center">OPERATIONS</h2>
+
+      <ul class="ul white text-grey">
+        <li class="padding">Drive for Quality Education <span class="tag margin-left" style="background-color:#f00" id="link1">RELEVANT -  TOPICS</span></li>
+      </ul>
+
+      <div class="row-padding padding-32" style="margin:0 -16px">
+        <div class="third margin-bottom">
+          
+          <div class="container white">
+            <p><b>SOFTWARE ENGINEERING</b></p>
+            <button oncick="location.href='{% url 'script' %}'"> execute script</button>
+            {% if data %}
+            {{data}}
+            {% end if}
+
+
+
+            <a href="#" class="bar-item button padding-large">ENTER TOPIC</a>
+            <a href="#" class="bar-item button padding-large">ENTER TOPIC</a>
+            <a href="#" class="bar-item button padding-large">ENTER TOPIC</a>
+            <a href="#" class="bar-item button padding-large">ENTER TOPIC</a>
+            <a href="#" class="bar-item button padding-large">ENTER TOPIC</a>
+            <a href="#" class="bar-item button padding-large">ENTER TOPIC</a>
+            <a href="#" class="bar-item button padding-large">ENTER TOPIC</a>
+            <a href="#" class="bar-item button padding-large">ENTER TOPIC</a>
+    
+          
+            <p class="opacity"></p>
+            <p></p>
+            <button class="button black margin-bottom" onclick="document.getElementById('ticketModal').style.display='block' "style="visibility:hidden">Buy Tickets</button>
+          </div>
+        </div>
+        <div class="third margin-bottom">
+          <a alt="Paris" style="width:100%" class="hover-opacity" id="hover4"></a>
+          
+        </div>
+        <div class="third margin-bottom">
+          <div class="container white">
+            <p><b>OPERATING SYSTEM</b></p>
+            <a href="#" class="bar-item button padding-large">ENTER TOPIC</a>
+            <a href="#" class="bar-item button padding-large">ENTER TOPIC</a>
+            <a href="#" class="bar-item button padding-large">ENTER TOPIC</a>
+            <a href="#" class="bar-item button padding-large">ENTER TOPIC</a>
+            <a href="#" class="bar-item button padding-large">ENTER TOPIC</a>
+            <a href="#" class="bar-item button padding-large">ENTER TOPIC</a>
+            <a href="#" class="bar-item button padding-large">ENTER TOPIC</a>
+            <a href="#" class="bar-item button padding-large">ENTER TOPIC</a>
+            <a href="#" class="bar-item button padding-large">ENTER TOPIC</a>
+
+            <p class="opacity"></p>
+            <p></p>
+            <button class="button black margin-bottom" onclick="document.getElementById('ticketModal').style.display='block'" style="visibility:hidden">Buy Tickets</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+
+  <!-- The Contact Section -->
+  <!-----
+  <div class="container content padding-64" id="contact" >
+    <h2 class="wide center">CONTACT</h2>
+    <p class="opacity center"><i>Got suggestions? Drop a note!</i></p>
+    <div class="row padding-32">
+      <div class="col m6 large margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i> Vellore , Tamil Nadu<br>
+        <i class="fa fa-phone" style="width:30px"></i> Phone: +91 0101010101<br>
+        <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com<br>
+      </div>
+      <div class="col m6">
+        <form action="/contact" target="_blank" method="POST">
+          <div class="row-padding" style="margin:0 -16px 8px -16px">
+            <div class="half">
+              <input class="input border" type="text" placeholder="Name" required name="Name">
+            </div>
+            <div class="half">
+              <input class="input border" type="text" placeholder="Email" required name="Email">
+            </div>
+          </div>
+          <input class="input border" type="text" placeholder="Message" required name="Message">
+          <button class="button black section right" type="submit">SEND</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  -->
+<!-- End Page Content -->
+</div>
+
+<!-- Image of location/map -->
+<div class="parallax"></div>
+
+<!-- Footer -->
+<footer class="container padding-64 center opacity light-grey xlarge">
+
+  <i class="fa fa-facebook-official hover-opacity"></i>
+  <i class="fa fa-instagram hover-opacity"></i>
+  <i class="fa fa-snapchat hover-opacity"></i>
+  <i class="fa fa-pinterest-p hover-opacity"></i>
+  <i class="fa fa-twitter hover-opacity"></i>
+  <i class="fa fa-linkedin hover-opacity"></i>
+  <p id="backtotop"><img src="Images/arrow.png" style="height:40px;width:40px"></p>
+  <p style="font-size:15px">HACK FOR CAUSE</p>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 5 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 5000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("show") == -1) {
+    x.className += " show";
+  } else { 
+    x.className = x.className.replace(" show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
